@@ -1,0 +1,25 @@
+[package]
+name = "worldgen"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libnoise = "1.1.2"
+noise = { version = "0.8.2" }
+png = "0.17.13"
+rayon = "1.9.0"
+
+egui = "0.26.2"
+eframe = { version = "0.26.2", features = [
+  "default",
+  "__screenshot", # __screenshot is so we can dump a screenshot using EFRAME_SCREENSHOT_TO
+] }
+egui_extras = { version = "0.26.2", features = ["default", "all_loaders"] }
+env_logger = { version = "0.10", default-features = false, features = [
+  "auto-color",
+  "humantime",
+] }
+image = { version = "0.24", default-features = false, features = [
+  "jpeg",
+  "png",
+] }
